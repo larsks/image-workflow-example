@@ -1,0 +1,22 @@
+{% extends 'page.html' %}
+{% block title %}Main{% endblock %}
+{% block content %}
+
+{% filter markdown %}
+This application is part of the [image-workflow-example][] repository. If you're
+seeing this, it looks like you've been able to successfully deploy the manifests.
+
+[image-workflow-example]: https://github.com/larsks/image-workflow-example
+{% endfilter %}
+
+<h2>Environment</h2>
+<table class="bordered">
+{% for name in environment %}
+<tr>
+  <td>{{ name }}</td>
+  <td>{{ environment[name] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

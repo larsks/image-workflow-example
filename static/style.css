@@ -1,0 +1,9 @@
+
+table.bordered {
+    border: thin solid black;
+}
+
+table.bordered td {
+    border: thin solid black;
+    border-collapse: collapse;
+}

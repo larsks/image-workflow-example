@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Image Workflow Example: {% block title %}{% endblock %}</title>
+    {% block head %}
+    <link rel="stylesheet" href="/static/style.css"></link>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="page_header">
+      <h1>{{ self.title() }}</h1>
+    </div>
+
+    <div id="page_content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
